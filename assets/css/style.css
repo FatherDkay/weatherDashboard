@@ -1,0 +1,133 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(50px, auto); 
+  }
+
+.topBar {
+background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(94,94,254,1) 0%, rgba(1,2,40,1) 100%);
+color: white;
+align-items: Center;
+text-align: center;
+}
+
+.currentContainer {
+    width: 90%;
+}
+
+.searchContainer {
+    width: 90%;
+}
+
+.boldFont{
+    font-weight: bold;
+}
+
+.search {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.btnSearch {
+    background-color: rgb(76, 171, 230);
+    color: white;
+    width: 100%;
+    padding: 4px;
+    margin: 8px 0px;
+}
+
+.btnCity {
+    background-color: lightgray;
+    color: black;
+    width: 100%;
+    padding: 4px;
+    margin: 8px 0px;
+}
+
+.currentCity {
+    float: left;
+    width: 90%;
+    border: 1px solid black;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
+    font-weight: bold;
+}
+.searchBoarder {
+    border-Top: 2px solid black;
+}
+
+.days {
+    background-color:rgb(3, 51, 82);
+    color: white;
+
+}
+/* Begin Card Format */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float five columns side by side */
+  .column {
+    float: left;
+    width: 20%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color:rgb(3, 51, 82);
+    color: white;
+  }
+
+.uVBox {
+    color: Black;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.uVLow {
+    background-color: green;
+    color: white;
+}
+
+.uVModerate {
+    background-color: rgb(240, 146, 6);
+    color: white;
+}
+
+.uVHigh {
+    background-color: red;
+    color: white;
+}

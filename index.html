@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Weather Dashboard</title>
+    </head>
+
+    <body>
+        <div id="topBar" class = "topBar">
+            <h2 class="boldFont">Weather Dashboard</h2>
+        </div>
+
+        <div class="w3-col w3-container m4 l3 searchContainer">
+            <form class ="w3-container">
+                <h3 class ="boldFont">Search for a City:</h3>
+                <input id="search" class ="w3-input search" type = "text">
+                <button id="btnSubmit" class = "w3-button w3-round btnSearch">Search</button>
+                <div class ="searchBoarder">
+                </div>
+            </form>
+        </div>
+
+        <div id="currentCity"class="w3-col w3-container m8 l9 currentCity">
+            <div id = "cityDate">
+                <h2 id = "titleInfo"><span id="titleInfoText"></span>
+                    <span id ="cityDateSpan"></span>
+                </h2>
+                
+            </div>
+            <div>
+                <p id="currentTemp"> Temp:</p>
+            </div>
+            <div>
+                <p id="currentWind">Wind:</p>
+            </div>
+            <div>
+                <p id="currentHumidity">Humidity:</p>
+            </div>
+            <div>
+                <p>UV Index: <span id="currentUV" class ="uVBox">N/D</span></p>
+            </div>
+        </div>
+
+        <div class="w3-col w3-container m4 l3 btnCities">
+            <div id="btnHolder" class ="w3-container">
+            </div>
+        </div>
+
+        <div id="days"class="w3-col w3-container m8 l9">
+            <h3 class ="boldFont">5 Day Forcast:</h2>
+            <div class="row">
+            <div class="column">
+            <div id="day0" class="card">
+                <h4 id="dayDate0" class = "boldFont">Day 1 Date</h4>
+            <div id ="dayIcon0">
+                <p></p>
+            </div>
+            <div>
+                <p id="dayTemp0">Temp:</p>
+            </div>
+            <div>
+                <p id="dayWind0">Wind: </p>
+            </div>
+            <div>
+                <p id="dayHumidity0">Humidity: </p>
+            </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div id="day1" class="card">
+                <h4 id="dayDate1" class="boldFont">Day 2 Date</h4>
+            <div>
+                <p id ="dayIcon1"></p>
+            </div>
+            <div>
+                <p id="dayTemp1">Temp:</p>
+            </div>
+            <div>
+                <p id="dayWind1">Wind: </p>
+            </div>
+            <div>
+                <p id="dayHumidity1">Humidity: </p>
+            </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div id="day2" class="card">
+                <h4 id="dayDate2" class ="boldFont">Day 3 Date</h3>
+            <div>
+                <p id ="dayIcon2"></p>
+            </div>
+            <div>
+                <p id="dayTemp2">Temp:</p>
+            </div>
+            <div>
+                <p id="dayWind2">Wind: </p>
+            </div>
+            <div>
+                <p id="dayHumidity2">Humidity: </p>
+            </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div id="day3" class="card">
+                <h4 id="dayDate3" class ="boldFont">Day 4 Date</h4>
+            <div>
+            <p id ="dayIcon3"></p>
+            </div>
+            <div>
+                <p id="dayTemp3">Temp:</p>
+            </div>
+            <div>
+                <p id="dayWind3">Wind: </p>
+            </div>
+            <div>
+                <p id="dayHumidity3">Humidity:</p>
+            </div>
+            </div>
+            </div>
+
+            <div class="column">
+            <div id="day4" class = "card">
+                <h4 id="dayDate4" class = "boldFont">Day 5 Date</h4>
+            <div>
+                <p id ="dayIcon4"></p>
+            </div>
+            <div>
+                <p id="dayTemp4">Temp:</p>
+            </div>
+            <div>
+                <p id="dayWind4">Wind: </p>
+            </div>
+            <div>
+                <p id="dayHumidity4">Humidity: </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="./assets/js/script.js"></script>
+    </body>
+</html>
