@@ -24,6 +24,10 @@ text-align: center;
 .boldFont{
     font-weight: bold;
 }
+.example {
+  font-weight:lighter;
+  font-style: italic;
+}
 
 .search {
     border-radius: 10px;
