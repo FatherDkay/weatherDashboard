@@ -45,7 +45,6 @@ $('#btnSubmit').click(function(ev){
         getCity(newButton.text(), false);
     });
 } else {
-    window.alert("Button creation did not occur due to duplicate entry");
     return
 };
 });
