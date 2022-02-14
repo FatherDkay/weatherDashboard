@@ -15,25 +15,26 @@ var cityInfo;
 var isNew;
 var getCity;
 var title =document.getElementById('cityDate');
+var searchedCities = [];
+var dupe = "NO DUPE";
 
 $('#btnSubmit').click(function(ev){
     ev.preventDefault();
     $('.iconImage').remove();
     let cityNfo =(document.getElementById('search').value);
-    var copies = 0
     //check for dupe
     for(let i=0; i < cities.length; i++){
         if(cities[i] == cityNfo) {
-            copies++;
-        }
-    }
-    if(copies > 0) {
-        (!isNew);
-    } else {
-        (isNew);
-    }
+           dupe ="DUPE"
+           break;
+        } else {
+            dupe ="NO DUPE";
+        };
+    };
 
     getCity(document.getElementById('search').value, true);
+    //button creation if not a dupe
+    if(dupe==="NO DUPE") {
     let newButton = $(document.createElement("button"));
     newButton.text(cityNfo);
     newButton.addClass("w3-button w3-round btnCity");
@@ -43,7 +44,10 @@ $('#btnSubmit').click(function(ev){
         ev.preventDefault();
         getCity(newButton.text(), false);
     });
-
+} else {
+    window.alert("Button creation did not occur due to duplicate entry");
+    return
+};
 });
 
 //Load Buttons
@@ -152,12 +156,14 @@ function populate(newCity) {
         dailyIcon.addClass("iconImage2");
         $(iconNfo).append(dailyIcon);
     }
-    if(newCity) {
-        saveData();
-    }
-    
 
-}
+    if(dupe === "DUPE") {
+        return;
+    } else {
+        saveData();
+    };
+};
+
 function saveData() {
     cities.push(cityInfo);
     localStorage.setItem(WEATHERDASHBOARD_KEY, JSON.stringify(cities));
@@ -169,18 +175,4 @@ function getData() {
         return [];
     }
     return JSON.parse(savedCity);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
